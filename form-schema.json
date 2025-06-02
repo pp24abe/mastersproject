@@ -124,6 +124,34 @@
         "fontFamily": "Arial, sans-serif",
         "marginBottom": "1rem"
       }
+    },
+    {
+      "id": "id-qm921jpvo",
+      "type": "url",
+      "label": "Website URL",
+      "placeholder": "",
+      "required": false,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "className": "",
+      "options": "",
+      "step": 1,
+      "conditionalField": null,
+      "iconClass": "",
+      "comment": "",
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      }
     }
   ]
 }
