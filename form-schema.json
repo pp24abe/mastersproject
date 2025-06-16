@@ -14,9 +14,9 @@
   },
   "formElements": [
     {
-      "id": "id-s5snqes2o",
+      "id": "id-xuv6hpl1k",
       "type": "input",
-      "label": "Name",
+      "label": "Full Name",
       "placeholder": "",
       "required": true,
       "minLength": "",
@@ -42,16 +42,16 @@
       }
     },
     {
-      "id": "id-laqa7ai6q",
-      "type": "select",
-      "label": "How did you hear about us?",
+      "id": "id-l4cs9u5w6",
+      "type": "email",
+      "label": "Email Address",
       "placeholder": "",
       "required": true,
       "minLength": "",
       "maxLength": "",
       "pattern": "",
       "className": "",
-      "options": "Social Media, Search Engine, Friend, Advertisement",
+      "options": "",
       "step": 1,
       "conditionalField": null,
       "iconClass": "",
@@ -70,9 +70,9 @@
       }
     },
     {
-      "id": "id-q1ca5icqw",
-      "type": "file",
-      "label": "File Upload",
+      "id": "id-hitgwmap0",
+      "type": "input",
+      "label": "Subject",
       "placeholder": "",
       "required": false,
       "minLength": "",
@@ -98,11 +98,11 @@
       }
     },
     {
-      "id": "id-g3gew9n6k",
-      "type": "date",
-      "label": "Date",
+      "id": "id-8yys1zt9p",
+      "type": "textarea",
+      "label": "Message",
       "placeholder": "",
-      "required": false,
+      "required": true,
       "minLength": "",
       "maxLength": "",
       "pattern": "",
