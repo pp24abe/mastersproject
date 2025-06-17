@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Generated Form</title>
-  <!-- ...other links... -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
     <!-- Firebase App (the core Firebase SDK) -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
@@ -46,12 +46,62 @@
       });
     </script>
   
-  <!-- ...custom CSS... -->
+  <style>
+    body { background: #f8f9fa; }
+    .custom-form {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+    .custom-form .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    
+  </style>
 </head>
 <body>
   <div class="container mt-5">
     <form id="exported-form" class="custom-form bg-white p-4 rounded shadow">
-      <!-- ...form fields... -->
+      
+        <div class="mb-3">
+          <label>First Name *</label>
+          <input class="form-control" type="text" name="id-y6q15wpi5"  required    />
+        </div>
+      
+        <div class="mb-3">
+          <label>Last Name *</label>
+          <input class="form-control" type="text" name="id-ujjj7h3q9"  required    />
+        </div>
+      
+        <div class="mb-3">
+          <label>Phone Number</label>
+          <input class="form-control" type="text" name="id-bw8m7fp0f"     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+        </div>
+      
+        <div class="mb-3">
+          <label>Date of Birth</label>
+          <input class="form-control" type="date" name="id-rfjr640cc"      />
+        </div>
+      
+        <div class="mb-3">
+          <label>Country *</label>
+          <select class="form-select" name="id-bjp0l5aa4" required>
+            <option value="">Choose...</option>
+            <option value="United States">United States</option><option value="Canada">Canada</option><option value="United Kingdom">United Kingdom</option><option value="Australia">Australia</option><option value="Other">Other</option>
+          </select>
+        </div>
+      
+        <div class="mb-3 form-check">
+          <input class="form-check-input" type="checkbox" name="id-bgncj3kxk" id="id-bgncj3kxk" required>
+          <label class="form-check-label" for="id-bgncj3kxk">I agree to terms and conditions</label>
+        </div>
+      
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
   </div>
