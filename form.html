@@ -9,6 +9,7 @@
     <!-- Firebase App (the core Firebase SDK) -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
     <script>
       // Initialize Firebase
       const firebaseConfig = {"apiKey":"AIzaSyB7QcnCc-j9_NW-N-MkJgj5igsG1SQRAuU","authDomain":"mainproject-38fa4.firebaseapp.com","databaseURL":"https://mainproject-38fa4-default-rtdb.firebaseio.com","projectId":"mainproject-38fa4","storageBucket":"mainproject-38fa4.appspot.com","messagingSenderId":"898372993152","appId":"1:898372993152:web:a0e7a45eb8326ee172e665"};
@@ -36,10 +37,10 @@
               timestamp: new Date().toISOString(),
               data
             }).then(() => {
-              alert('Form submitted!');
+              swal('Success', 'Form submitted!', 'success');
               form.reset();
             }).catch(err => {
-              alert('Submission failed: ' + err.message);
+              swal('Error', 'Submission failed: ' + err.message, 'error');
             });
           });
         }
@@ -70,36 +71,23 @@
     <form id="exported-form" class="custom-form bg-white p-4 rounded shadow">
       
         <div class="mb-3">
-          <label>First Name *</label>
-          <input class="form-control" type="text" name="id-y6q15wpi5"  required    />
+          <label>Full Name *</label>
+          <input class="form-control" type="text" name="id-xpb4w0r0u"  required    />
         </div>
       
         <div class="mb-3">
-          <label>Last Name *</label>
-          <input class="form-control" type="text" name="id-ujjj7h3q9"  required    />
+          <label>Email Address *</label>
+          <input class="form-control" type="email" name="id-a5qder1hv"  required    />
         </div>
       
         <div class="mb-3">
-          <label>Phone Number</label>
-          <input class="form-control" type="text" name="id-bw8m7fp0f"     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+          <label>Subject</label>
+          <input class="form-control" type="text" name="id-klrjat58b"      />
         </div>
       
         <div class="mb-3">
-          <label>Date of Birth</label>
-          <input class="form-control" type="date" name="id-rfjr640cc"      />
-        </div>
-      
-        <div class="mb-3">
-          <label>Country *</label>
-          <select class="form-select" name="id-bjp0l5aa4" required>
-            <option value="">Choose...</option>
-            <option value="United States">United States</option><option value="Canada">Canada</option><option value="United Kingdom">United Kingdom</option><option value="Australia">Australia</option><option value="Other">Other</option>
-          </select>
-        </div>
-      
-        <div class="mb-3 form-check">
-          <input class="form-check-input" type="checkbox" name="id-bgncj3kxk" id="id-bgncj3kxk" required>
-          <label class="form-check-label" for="id-bgncj3kxk">I agree to terms and conditions</label>
+          <label>Message *</label>
+          <textarea class="form-control" name="id-6a3r3ff72"  required  ></textarea>
         </div>
       
       <button class="btn btn-primary" type="submit">Submit</button>
