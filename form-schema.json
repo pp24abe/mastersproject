@@ -1,17 +1,4 @@
 {
-  "formStyle": {
-    "backgroundColor": "#ffffff",
-    "textColor": "#000000",
-    "primaryColor": "#007bff",
-    "fontFamily": "Arial, sans-serif",
-    "fontSize": "16px",
-    "borderRadius": "4px",
-    "spacing": "1rem",
-    "maxWidth": "600px",
-    "customCSS": "",
-    "googleFontURL": "",
-    "iconLibraryURL": ""
-  },
   "formElements": [
     {
       "id": "id-xpb4w0r0u",
@@ -124,6 +111,44 @@
         "fontFamily": "Arial, sans-serif",
         "marginBottom": "1rem"
       }
+    },
+    {
+      "id": "id-ji8104qd7",
+      "type": "url",
+      "label": "Website URL",
+      "placeholder": "",
+      "required": false,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "options": "",
+      "iconClass": "fas fa-link",
+      "step": 1,
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      }
     }
-  ]
+  ],
+  "formStyle": {
+    "backgroundColor": "#ffffff",
+    "textColor": "#000000",
+    "primaryColor": "#007bff",
+    "fontFamily": "Arial, sans-serif",
+    "fontSize": "16px",
+    "borderRadius": "4px",
+    "spacing": "1rem",
+    "maxWidth": "600px",
+    "customCSS": "",
+    "googleFontURL": "",
+    "iconLibraryURL": ""
+  }
 }
