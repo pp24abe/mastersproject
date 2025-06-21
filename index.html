@@ -1,98 +1,93 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Generated Form</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
   
-    <!-- Firebase App (the core Firebase SDK) -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-      // Initialize Firebase
-      const firebaseConfig = {"apiKey":"AIzaSyB7QcnCc-j9_NW-N-MkJgj5igsG1SQRAuU","authDomain":"mainproject-38fa4.firebaseapp.com","databaseURL":"https://mainproject-38fa4-default-rtdb.firebaseio.com","projectId":"mainproject-38fa4","storageBucket":"mainproject-38fa4.appspot.com","messagingSenderId":"898372993152","appId":"1:898372993152:web:a0e7a45eb8326ee172e665"};
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.database();
-
-      document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('exported-form');
-        if (form) {
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const data = {};
-            Array.from(form.elements).forEach(el => {
-              if (el.name) {
-                if (el.type === 'checkbox') {
-                  data[el.name] = el.checked;
-                } else if (el.type === 'radio') {
-                  if (el.checked) data[el.name] = el.value;
-                } else {
-                  data[el.name] = el.value;
-                }
-              }
-            });
-            db.ref('submissions').push({
-              timestamp: new Date().toISOString(),
-              data
-            }).then(() => {
-              swal('Success', 'Form submitted!', 'success');
-              form.reset();
-            }).catch(err => {
-              swal('Error', 'Submission failed: ' + err.message, 'error');
-            });
-          });
-        }
-      });
-    </script>
+    <style>
+      .custom-form {
+        background: #ffffff;
+        color: #000000;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1rem;
+        border-radius: 4px;
+      }
+      .custom-form .btn-primary {
+        background: #007bff;
+        border-color: #007bff;
+      }
+      
+    </style>
   
-  <style>
-    body { background: #f8f9fa; }
-    .custom-form {
-      background-color: #ffffff;
-      color: #000000;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 1rem;
-      border-radius: 4px;
-    }
-    .custom-form .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
-    }
-    
-  </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <form id="exported-form" class="custom-form bg-white p-4 rounded shadow">
-      
-        <div class="mb-3">
-          <label>Full Name *</label>
-          <input class="form-control" type="text" name="full_name"  required    />
-        </div>
-      
-        <div class="mb-3">
-          <label>Email Address *</label>
-          <input class="form-control" type="email" name="email_address"  required    />
-        </div>
-      
-        <div class="mb-3">
-          <label>Subject</label>
-          <input class="form-control" type="text" name="subject"      />
-        </div>
-      
-        <div class="mb-3">
-          <label>Message *</label>
-          <textarea class="form-control" name="message"  required  ></textarea>
-        </div>
-      
-      <button class="btn btn-primary" type="submit">Submit</button>
+  <div class="container my-5">
+    <form class="custom-form" id="exported-form">
+<div class="mb-3">
+<label class="form-label" for="id-xqt09dcyv">Full Name<span style="color:red">*</span></label>
+<input class="form-control" type="text" id="id-xqt09dcyv" name="Full Name"  required/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="id-9miw7azyj">Email Address<span style="color:red">*</span></label>
+<input class="form-control" type="email" id="id-9miw7azyj" name="Email Address"  required/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="id-tne7jakd8">Subject</label>
+<input class="form-control" type="text" id="id-tne7jakd8" name="Subject"  />
+</div>
+<div class="mb-3">
+<label class="form-label" for="id-my0wgs31h">Message<span style="color:red">*</span></label>
+<textarea class="form-control" id="id-my0wgs31h" name="Message"  required></textarea>
+</div>
+<button class="btn btn-primary" type="submit">Submit</button>
     </form>
   </div>
+
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  // Initialize Firebase
+  const firebaseConfig = {"apiKey":"AIzaSyB7QcnCc-j9_NW-N-MkJgj5igsG1SQRAuU","authDomain":"mainproject-38fa4.firebaseapp.com","databaseURL":"https://mainproject-38fa4-default-rtdb.firebaseio.com","projectId":"mainproject-38fa4","storageBucket":"mainproject-38fa4.appspot.com","messagingSenderId":"898372993152","appId":"1:898372993152:web:a0e7a45eb8326ee172e665"};
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('exported-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = {};
+        Array.from(form.elements).forEach(el => {
+          if (el.name) {
+            if (el.type === 'checkbox') {
+              data[el.name] = el.checked;
+            } else if (el.type === 'radio') {
+              if (el.checked) data[el.name] = el.value;
+            } else {
+              data[el.name] = el.value;
+            }
+          }
+        });
+        db.ref('submissions').push({
+          timestamp: new Date().toISOString(),
+          data
+        }).then(() => {
+          swal('Success', 'Form submitted!', 'success');
+          form.reset();
+        }).catch(err => {
+          swal('Error', 'Submission failed: ' + err.message, 'error');
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>
-  
