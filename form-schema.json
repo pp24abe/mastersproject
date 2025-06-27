@@ -2,28 +2,9 @@
   "formElements": [
     {
       "type": "input",
-      "label": "Full Name",
+      "label": "First Name",
       "required": true,
-      "id": "id-xqt09dcyv",
-      "step": 1,
-      "customStyle": {
-        "backgroundColor": "#ffffff",
-        "textColor": "#000000",
-        "borderColor": "#ced4da",
-        "borderWidth": "1px",
-        "borderRadius": "4px",
-        "padding": "0.375rem 0.75rem",
-        "fontSize": "1rem",
-        "width": "100%",
-        "fontFamily": "Arial, sans-serif",
-        "marginBottom": "1rem"
-      }
-    },
-    {
-      "type": "email",
-      "label": "Email Address",
-      "required": true,
-      "id": "id-9miw7azyj",
+      "id": "id-a4vs847tr",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -40,8 +21,9 @@
     },
     {
       "type": "input",
-      "label": "Subject",
-      "id": "id-tne7jakd8",
+      "label": "Last Name",
+      "required": true,
+      "id": "id-dg5holgm6",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -57,10 +39,86 @@
       }
     },
     {
-      "type": "textarea",
-      "label": "Message",
+      "type": "email",
+      "label": "Email",
       "required": true,
-      "id": "id-my0wgs31h",
+      "id": "id-pzdf74qr0",
+      "step": 1,
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      }
+    },
+    {
+      "type": "input",
+      "label": "Phone Number",
+      "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{4}",
+      "id": "id-ko8hymobw",
+      "step": 1,
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      }
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "id": "id-2t1o59mfr",
+      "step": 1,
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      }
+    },
+    {
+      "type": "select",
+      "label": "Country",
+      "options": "United States, Canada, United Kingdom, Australia, Other",
+      "required": true,
+      "id": "id-pvsd2clsa",
+      "step": 1,
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      }
+    },
+    {
+      "type": "checkbox",
+      "label": "I agree to terms and conditions",
+      "required": true,
+      "id": "id-nxa6rh6lz",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
