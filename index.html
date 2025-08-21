@@ -30,64 +30,52 @@
   <div class="container my-5">
     <form class="custom-form" id="exported-form">
 <div class="mb-3">
-<label class="form-label" for="id-urqam4rdt">Full Name<span style="color:red">*</span></label>
-<input class="form-control" type="text" id="id-urqam4rdt" name="Full Name"  required/>
+<label class="form-label" for="id-v8l1oe9b9">Full Name<span style="color:red">*</span></label>
+<input class="form-control" type="text" id="id-v8l1oe9b9" name="Full Name"  required/>
 </div>
 <div class="mb-3">
-<label class="form-label" for="id-xgpv7ccem">Email Address<span style="color:red">*</span></label>
-<input class="form-control" type="email" id="id-xgpv7ccem" name="Email Address"  required/>
+<label class="form-label" for="id-r6vq9v84z">Email Address<span style="color:red">*</span></label>
+<input class="form-control" type="email" id="id-r6vq9v84z" name="Email Address"  required/>
 </div>
 <div class="mb-3">
-<label class="form-label" for="id-wvf7m70by">Subject</label>
-<input class="form-control" type="text" id="id-wvf7m70by" name="Subject"  />
+<label class="form-label" for="id-76ri9zo0p">Subject</label>
+<input class="form-control" type="text" id="id-76ri9zo0p" name="Subject"  />
 </div>
 <div class="mb-3">
-<label class="form-label" for="id-65yvhu2vq">Message<span style="color:red">*</span></label>
-<textarea class="form-control" id="id-65yvhu2vq" name="Message"  required></textarea>
+<label class="form-label" for="id-fwfbflf30">Message<span style="color:red">*</span></label>
+<textarea class="form-control" id="id-fwfbflf30" name="Message"  required></textarea>
 </div>
 <button class="btn btn-primary" type="submit">Submit</button>
     </form>
   </div>
 
-<!-- Firebase App (the core Firebase SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-  // Initialize Firebase
-  const firebaseConfig = {"apiKey":"AIzaSyB7QcnCc-j9_NW-N-MkJgj5igsG1SQRAuU","authDomain":"mainproject-38fa4.firebaseapp.com","databaseURL":"https://mainproject-38fa4-default-rtdb.firebaseio.com","projectId":"mainproject-38fa4","storageBucket":"mainproject-38fa4.appspot.com","messagingSenderId":"898372993152","appId":"1:898372993152:web:a0e7a45eb8326ee172e665"};
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
+        <!-- Firebase App (the core Firebase SDK) -->
+        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+          // Initialize Firebase
+          const firebaseConfig = {"path":"submissions","apiKey":"","databaseURL":""};
+          firebase.initializeApp(firebaseConfig);
+          const db = firebase.database();
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('exported-form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const data = {};
-        Array.from(form.elements).forEach(el => {
-          if (el.name) {
-            if (el.type === 'checkbox') {
-              data[el.name] = el.checked;
-            } else if (el.type === 'radio') {
-              if (el.checked) data[el.name] = el.value;
-            } else {
-              data[el.name] = el.value;
-            }
-          }
-        });
-        db.ref('submissions').push({
-          timestamp: new Date().toISOString(),
-          data
-        }).then(() => {
-          swal('Success', 'Form submitted!', 'success');
-          form.reset();
-        }).catch(err => {
-          swal('Error', 'Submission failed: ' + err.message, 'error');
-        });
-      });
-    }
-  });
-</script>
+          document.getElementById('exported-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = {};
+            new FormData(e.target).forEach((value, key) => {
+              data[key] = value;
+            });
+            db.ref((firebaseConfig && firebaseConfig.path) || 'submissions').push({
+              timestamp: new Date().toISOString(),
+              data
+            }).then(() => {
+              swal('Success', 'Form submitted!', 'success');
+              e.target.reset();
+            }).catch(err => {
+              swal('Error', 'Submission failed: ' + err.message, 'error');
+            });
+          });
+        </script>
+      
 </body>
 </html>
