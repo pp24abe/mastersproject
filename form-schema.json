@@ -2,9 +2,9 @@
   "formElements": [
     {
       "type": "input",
-      "label": "Customer Name",
+      "label": "Full Name",
       "required": true,
-      "id": "id-pa46c75ow",
+      "id": "id-v8l1oe9b9",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -19,13 +19,13 @@
         "marginBottom": "1rem"
       },
       "inputType": "text",
-      "name": "pa46c75ow"
+      "name": "v8l1oe9b9"
     },
     {
       "type": "email",
       "label": "Email Address",
       "required": true,
-      "id": "id-f7b8dc7j4",
+      "id": "id-r6vq9v84z",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -42,9 +42,8 @@
     },
     {
       "type": "input",
-      "label": "Phone Number",
-      "required": true,
-      "id": "id-9a6pta37h",
+      "label": "Subject",
+      "id": "id-76ri9zo0p",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -58,53 +57,15 @@
         "fontFamily": "Arial, sans-serif",
         "marginBottom": "1rem"
       },
+      "required": false,
       "inputType": "text",
-      "name": "9a6pta37h"
-    },
-    {
-      "type": "select",
-      "label": "Product",
-      "required": true,
-      "id": "id-7fm0zvugb",
-      "step": 1,
-      "customStyle": {
-        "backgroundColor": "#ffffff",
-        "textColor": "#000000",
-        "borderColor": "#ced4da",
-        "borderWidth": "1px",
-        "borderRadius": "4px",
-        "padding": "0.375rem 0.75rem",
-        "fontSize": "1rem",
-        "width": "100%",
-        "fontFamily": "Arial, sans-serif",
-        "marginBottom": "1rem"
-      },
-      "name": "7fm0zvugb"
-    },
-    {
-      "type": "number",
-      "label": "Quantity",
-      "required": true,
-      "id": "id-fg8bh9wcs",
-      "step": 1,
-      "customStyle": {
-        "backgroundColor": "#ffffff",
-        "textColor": "#000000",
-        "borderColor": "#ced4da",
-        "borderWidth": "1px",
-        "borderRadius": "4px",
-        "padding": "0.375rem 0.75rem",
-        "fontSize": "1rem",
-        "width": "100%",
-        "fontFamily": "Arial, sans-serif",
-        "marginBottom": "1rem"
-      }
+      "name": "76ri9zo0p"
     },
     {
       "type": "textarea",
-      "label": "Shipping Address",
+      "label": "Message",
       "required": true,
-      "id": "id-onzkl8jp3",
+      "id": "id-fwfbflf30",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -118,61 +79,7 @@
         "fontFamily": "Arial, sans-serif",
         "marginBottom": "1rem"
       },
-      "name": "onzkl8jp3"
-    },
-    {
-      "type": "radio",
-      "label": "Shipping Method",
-      "options": [
-        {
-          "label": "Standard",
-          "value": "Standard"
-        },
-        {
-          "label": "Express",
-          "value": "Express"
-        },
-        {
-          "label": "Overnight",
-          "value": "Overnight"
-        }
-      ],
-      "id": "id-phvbyy8yt",
-      "step": 1,
-      "customStyle": {
-        "backgroundColor": "#ffffff",
-        "textColor": "#000000",
-        "borderColor": "#ced4da",
-        "borderWidth": "1px",
-        "borderRadius": "4px",
-        "padding": "0.375rem 0.75rem",
-        "fontSize": "1rem",
-        "width": "100%",
-        "fontFamily": "Arial, sans-serif",
-        "marginBottom": "1rem"
-      },
-      "required": false,
-      "name": "phvbyy8yt"
-    },
-    {
-      "type": "checkbox",
-      "label": "Gift wrapping requested",
-      "id": "id-o3fjos68b",
-      "step": 1,
-      "customStyle": {
-        "backgroundColor": "#ffffff",
-        "textColor": "#000000",
-        "borderColor": "#ced4da",
-        "borderWidth": "1px",
-        "borderRadius": "4px",
-        "padding": "0.375rem 0.75rem",
-        "fontSize": "1rem",
-        "width": "100%",
-        "fontFamily": "Arial, sans-serif",
-        "marginBottom": "1rem"
-      },
-      "required": false,
-      "name": "o3fjos68b"
+      "name": "fwfbflf30"
     }
   ],
   "formStyle": {
