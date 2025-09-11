@@ -4,7 +4,7 @@
       "type": "input",
       "label": "Full Name",
       "required": true,
-      "id": "id-v8kek2p64",
+      "id": "id-9spmpwlde",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -19,13 +19,13 @@
         "marginBottom": "1rem"
       },
       "inputType": "text",
-      "name": "v8kek2p64"
+      "name": "9spmpwlde"
     },
     {
       "type": "email",
       "label": "Email Address",
       "required": true,
-      "id": "id-qmc14d8bn",
+      "id": "id-1bvuk340r",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -43,7 +43,7 @@
     {
       "type": "input",
       "label": "Subject",
-      "id": "id-rgzwrr3bw",
+      "id": "id-nla0liqvp",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -59,13 +59,13 @@
       },
       "required": false,
       "inputType": "text",
-      "name": "rgzwrr3bw"
+      "name": "nla0liqvp"
     },
     {
       "type": "textarea",
       "label": "Message",
       "required": true,
-      "id": "id-dgxj9izi9",
+      "id": "id-c9f389we0",
       "step": 1,
       "customStyle": {
         "backgroundColor": "#ffffff",
@@ -79,7 +79,57 @@
         "fontFamily": "Arial, sans-serif",
         "marginBottom": "1rem"
       },
-      "name": "dgxj9izi9"
+      "name": "c9f389we0"
+    },
+    {
+      "id": "id-69sd5oj85",
+      "type": "email",
+      "label": "Email Address",
+      "placeholder": "",
+      "required": false,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "iconClass": "fas fa-envelope",
+      "step": 1,
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      }
+    },
+    {
+      "id": "id-gkitzr7rc",
+      "type": "input",
+      "label": "Text Input",
+      "placeholder": "",
+      "required": false,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "iconClass": "fas fa-font",
+      "step": 1,
+      "customStyle": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#000000",
+        "borderColor": "#ced4da",
+        "borderWidth": "1px",
+        "borderRadius": "4px",
+        "padding": "0.375rem 0.75rem",
+        "fontSize": "1rem",
+        "width": "100%",
+        "fontFamily": "Arial, sans-serif",
+        "marginBottom": "1rem"
+      },
+      "inputType": "text",
+      "name": "gkitzr7rc"
     }
   ],
   "formStyle": {
